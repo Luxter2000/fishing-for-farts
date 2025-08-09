@@ -1,11 +1,9 @@
-// species.js — renders a Pokemon-card style species page using species.json
 (async function(){
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
   const data = await fetch('data/species.json').then(r=>r.json());
   const spec = data.find(s=>s.id===id) || data[0];
   if (!spec) return;
-
   document.title = `${spec.name} — Species Bio`;
   const $ = (s)=>document.querySelector(s);
   $("#img").src = spec.image;

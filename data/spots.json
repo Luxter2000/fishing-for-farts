@@ -1,27 +1,27 @@
 [
   {
-    "name": "Wellington Point Jetty",
-    "lat": -27.4487,
-    "lon": 153.2376,
-    "description": "Jetty & rock edges; flathead, bream, whiting."
+    "name": "Bongaree Jetty (Bribie)",
+    "lat": -27.0796,
+    "lon": 153.1595,
+    "description": "Family-friendly jetty; bream, whiting, flathead."
   },
   {
-    "name": "Cleveland Point (Lighthouse rocks)",
-    "lat": -27.5176,
-    "lon": 153.2873,
-    "description": "Rocky points, tidal flow; bream, tailor on dusk."
+    "name": "Scarborough Boat Harbour rock wall",
+    "lat": -27.1995,
+    "lon": 153.1126,
+    "description": "Tailor/bream along rocks and marina edges."
   },
   {
-    "name": "Manly Harbour Rock Wall",
-    "lat": -27.4508,
-    "lon": 153.1862,
-    "description": "Harbour wall; bream, tailor in SE winds."
+    "name": "Redcliffe Jetty",
+    "lat": -27.2283,
+    "lon": 153.1103,
+    "description": "Tailor in wind; bream around pylons."
   },
   {
-    "name": "Wynnum Jetty",
-    "lat": -27.4425,
-    "lon": 153.1666,
-    "description": "Family friendly; whiting on the flats."
+    "name": "Woody Point Jetty",
+    "lat": -27.2582,
+    "lon": 153.102,
+    "description": "Good depth; flathead and bream."
   },
   {
     "name": "Shorncliffe Pier",
@@ -30,16 +30,28 @@
     "description": "Long pier; tailor and bream on the run\u2011in."
   },
   {
-    "name": "Woody Point Jetty",
-    "lat": -27.2582,
-    "lon": 153.102,
-    "description": "Good depth; flathead around pylons."
+    "name": "Wynnum Jetty",
+    "lat": -27.4425,
+    "lon": 153.1666,
+    "description": "Flats nearby; whiting and bream."
   },
   {
-    "name": "Sandgate Foreshore",
-    "lat": -27.3202,
-    "lon": 153.0739,
-    "description": "Drains and channels; whiting over sand."
+    "name": "Manly Harbour Wall",
+    "lat": -27.4508,
+    "lon": 153.1862,
+    "description": "Bream on structure; tailor on dusk."
+  },
+  {
+    "name": "Wellington Point Jetty",
+    "lat": -27.4487,
+    "lon": 153.2376,
+    "description": "Jetty & rock edges; flathead, bream, whiting."
+  },
+  {
+    "name": "Cleveland Point Lighthouse Rocks",
+    "lat": -27.5176,
+    "lon": 153.2873,
+    "description": "Rocky points, tidal flow; bream, tailor."
   },
   {
     "name": "Victoria Point Jetty",
@@ -52,6 +64,18 @@
     "lat": -27.6203,
     "lon": 153.3147,
     "description": "Current lines and lights; mulloway after dark."
+  },
+  {
+    "name": "Amity Point Jetty (NSI)",
+    "lat": -27.3987,
+    "lon": 153.4457,
+    "description": "Jetty with depth and current; tailor, mackerel (seasonal)."
+  },
+  {
+    "name": "Point Lookout Headland access",
+    "lat": -27.4332,
+    "lon": 153.5407,
+    "description": "Rock ledges; tailor in swell, safety first."
   },
   {
     "name": "Pinkenba Rock Wall",

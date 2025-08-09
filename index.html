@@ -45,14 +45,15 @@
     <section class="panel left">
       <div class="card now" aria-live="polite">
         <h2><i data-feather="wind"></i> Conditions</h2>
+        <div id="status" class="status muted">Centered on Moreton Bay. Set your location for precision.</div>
         <div class="conditions">
-          <div><span class="label">Wind</span><span id="wind"></span> <span id="windDir" class="arrow" title="Wind direction"></span></div>
-          <div><span class="label">Pressure</span><span id="pressure"></span></div>
-          <div><span class="label">Tide</span><span id="tidePhase" title="Approximate tide model">Approx</span></div>
-          <div><span class="label">Moon</span><span id="moon"></span></div>
-          <div><span class="label">Temp</span><span id="temp"></span></div>
+          <div><span class="label">Wind</span><span id="wind">—</span> <span id="windDir" class="arrow" title="Wind direction"></span></div>
+          <div><span class="label">Pressure</span><span id="pressure">—</span></div>
+          <div><span class="label">Tide</span><span id="tidePhase" title="Approximate tide model">—</span></div>
+          <div><span class="label">Moon</span><span id="moon">—</span></div>
+          <div><span class="label">Temp</span><span id="temp">—</span></div>
         </div>
-        <p class="pun" id="pun">Sniffing out bitey breezes…</p>
+        <p class="pun" id="pun">Casting a whiff across the bay…</p>
       </div>
 
       <div class="card species">
@@ -74,17 +75,23 @@
 
     <section class="panel right">
       <div class="card map-card">
-        <div id="map" aria-label="Map showing nearby fishing spots"></div>
+        <div id="map" aria-label="Map of Moreton Bay and nearby fishing spots"></div>
       </div>
 
       <div class="card spots">
-        <h2><i data-feather="map"></i> Nearby spots</h2>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+          <h2 style="margin:0;display:flex;align-items:center;gap:.5rem"><i data-feather="map"></i> Nearby spots</h2>
+          <label class="toggle" style="display:flex;align-items:center;gap:.4rem">
+            <input type="checkbox" id="bayOnly" />
+            <span class="label">Bay only</span>
+          </label>
+        </div>
         <ul id="spotList" class="spot-list"></ul>
       </div>
 
       <div class="card chart">
         <h2><i data-feather="activity"></i> Next 24h forecast</h2>
-        <canvas id="forecastChart" height="250" aria-label="Overlay chart for wind, tide and rain"></canvas>
+        <canvas id="forecastChart" height="260" aria-label="Overlay chart for wind, tide and rain"></canvas>
         <div class="legend-note">Overlay: wind (km/h), tide (m), rain (mm). Shaded = good bite windows.</div>
       </div>
     </section>

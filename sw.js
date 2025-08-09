@@ -1,9 +1,10 @@
-const CACHE = 'fff-v2.0.0';
+const CACHE = 'fff-v3.1.0';
 const CORE = [
   './','./index.html','./species.html',
   './style.css','./app.js','./species.js',
   './data/spots.json','./data/species.json',
   './assets/logo.svg','./assets/arrow.svg','./assets/fart.svg',
+  './assets/pin.svg','./assets/pin-blue.svg',
   './assets/species/flathead.svg','./assets/species/bream.svg','./assets/species/whiting.svg','./assets/species/tailor.svg','./assets/species/mulloway.svg',
   './manifest.webmanifest'
 ];
