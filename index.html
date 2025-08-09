@@ -6,27 +6,12 @@
   <title>Fishing For Farts – A Stinky Journey</title>
   <meta name="description" content="Land-based fishing spot recommendations with weather, tides, and a whiff of humour." />
   <meta name="theme-color" content="#f7fafc" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="assets/icon-512.png" />
 
   <!-- Leaflet -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="anonymous"
-  />
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin="anonymous"
-    defer
-  ></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous" defer></script>
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
@@ -48,12 +33,10 @@
     </div>
     <div class="header-actions">
       <button id="btn-use-location" class="btn primary" aria-label="Use my current location">
-        <i data-feather="navigation"></i>
-        <span>Use my location</span>
+        <i data-feather="navigation"></i><span>Use my location</span>
       </button>
       <button id="btn-pick-location" class="btn" aria-label="Pick a location on the map">
-        <i data-feather="map-pin"></i>
-        <span>Pick on map</span>
+        <i data-feather="map-pin"></i><span>Pick on map</span>
       </button>
     </div>
   </header>
@@ -107,48 +90,13 @@
     </section>
   </main>
 
-  <!-- Species Bio Modal -->
-  <dialog id="speciesModal" class="modal" aria-label="Species bio">
-    <button class="modal-close" data-close aria-label="Close">&times;</button>
-    <div class="modal-body" id="speciesModalBody"></div>
-  </dialog>
-
-  <!-- Log Catch Modal -->
-  <dialog id="logModal" class="modal" aria-label="Log a catch">
-    <button class="modal-close" data-close aria-label="Close">&times;</button>
-    <div class="modal-body">
-      <h3>Log a Catch</h3>
-      <form id="logForm" class="form">
-        <label>Species
-          <select id="logSpecies" required></select>
-        </label>
-        <label>Size (cm)
-          <input type="number" id="logSize" min="0" step="0.1" required />
-        </label>
-        <label>Method
-          <input type="text" id="logMethod" placeholder="Lure, bait, fly…" />
-        </label>
-        <label>Notes
-          <textarea id="logNotes" rows="3" placeholder="Spot, conditions, epic whiff…"></textarea>
-        </label>
-        <div class="actions">
-          <button type="submit" class="btn primary"><i data-feather="save"></i> Save</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
   <footer class="app-footer">
     <small>© <span id="year"></span> Fishing For Farts – built with Leaflet, Chart.js, and Open‑Meteo.</small>
   </footer>
 
   <script>
     if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("sw.js").catch(() => {});
-      });
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
     }
   </script>
 </body>

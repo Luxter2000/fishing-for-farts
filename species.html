@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Species Bio — Fishing For Farts</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+  <script defer src="species.js"></script>
+  <style>
+    .poke-wrap{display:grid;place-items:center; padding:1rem}
+    .poke-card{
+      width:min(720px,96vw);
+      border-radius:20px;
+      background:linear-gradient(180deg,#fff,#f9fbff);
+      border:1px solid var(--grid);
+      box-shadow:0 12px 32px rgba(15,23,42,.08);
+      overflow:hidden;
+    }
+    .poke-header{display:grid; grid-template-columns:220px 1fr; gap:1rem; padding:1rem; align-items:center}
+    .poke-img{width:220px; height:220px; object-fit:cover; border-radius:16px; border:2px solid var(--grid)}
+    .poke-title{margin:0}
+    .poke-badges{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.4rem}
+    .poke-section{padding:0 1rem 1rem}
+    .poke-stats{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem}
+    .stat{background:#fff; border:1px solid var(--grid); border-radius:12px; padding:.6rem}
+    .back{display:inline-flex; align-items:center; gap:.35rem; margin:1rem; text-decoration:none}
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back"><i data-feather="arrow-left"></i> Back to app</a>
+  <div class="poke-wrap">
+    <article id="card" class="poke-card" hidden>
+      <header class="poke-header">
+        <img id="img" class="poke-img" alt="Species image" />
+        <div>
+          <h2 id="title" class="poke-title"></h2>
+          <div class="poke-badges">
+            <span class="badge" id="bag"></span>
+            <span class="badge" id="min"></span>
+            <span class="badge" id="habitat"></span>
+          </div>
+          <p id="blurb" style="margin:.6rem 0 0"></p>
+        </div>
+      </header>
+      <section class="poke-section">
+        <h3>Angler Notes</h3>
+        <div class="poke-stats">
+          <div class="stat"><strong>Best Tides</strong><div id="bestTides"></div></div>
+          <div class="stat"><strong>Best Times</strong><div id="bestTimes"></div></div>
+          <div class="stat"><strong>Preferred Baits</strong><div id="baits"></div></div>
+          <div class="stat"><strong>Go-To Lures</strong><div id="lures"></div></div>
+        </div>
+      </section>
+    </article>
+  </div>
+</body>
+</html>

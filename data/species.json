@@ -4,7 +4,19 @@
     "name": "Flathead",
     "bag": "5 (combined)",
     "min": 40,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Platycephalus_fuscus.png",
+    "image": "assets/species/flathead.svg",
+    "habitat": "Sand edges, drains",
+    "bestTides": "Falling to low around drains",
+    "bestTimes": "Dawn / late arvo",
+    "baits": [
+      "Prawns",
+      "Whitebait"
+    ],
+    "lures": [
+      "3-4\" soft plastics",
+      "Vibes",
+      "Topwater"
+    ],
     "blurb": "Ambush artist that loves edges and drain mouths. Glide a soft plastic near sand ripples and try not to spook it with your\u2026 enthusiasm."
   },
   {
@@ -12,7 +24,20 @@
     "name": "Bream",
     "bag": "30",
     "min": 25,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Acanthopagrus_australis.png",
+    "image": "assets/species/bream.svg",
+    "habitat": "Pylons, rock walls",
+    "bestTides": "Mid to high on run-in",
+    "bestTimes": "Dawn/Dusk/Night under lights",
+    "baits": [
+      "Prawn",
+      "Chicken",
+      "Mullet strip"
+    ],
+    "lures": [
+      "Crankbaits",
+      "Small plastics",
+      "Jigheads"
+    ],
     "blurb": "Picket\u2011pocket of the pylons. Light leaders, smelly baits. If it stinks, it links."
   },
   {
@@ -20,7 +45,18 @@
     "name": "Whiting",
     "bag": "30",
     "min": 23,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sillago_ciliata.png",
+    "image": "assets/species/whiting.svg",
+    "habitat": "Sand flats",
+    "bestTides": "Rising over flats",
+    "bestTimes": "Morning with sun on sand",
+    "baits": [
+      "Yabbies",
+      "Worms"
+    ],
+    "lures": [
+      "Small poppers",
+      "Walk-the-dog"
+    ],
     "blurb": "Sand\u2011dwelling sugar sticks. Walk the dog lures or worms on a slow roll over the flats."
   },
   {
@@ -28,7 +64,18 @@
     "name": "Tailor",
     "bag": "20",
     "min": 35,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Pomatomus_saltatrix.png",
+    "image": "assets/species/tailor.svg",
+    "habitat": "Headlands, surf gutters",
+    "bestTides": "Dawn/evening with movement",
+    "bestTimes": "Low light, choppy days",
+    "baits": [
+      "Pilchards",
+      "Garfish"
+    ],
+    "lures": [
+      "Metals",
+      "Stickbaits"
+    ],
     "blurb": "Foam\u2011line slashers. Metals at dawn and dusk; keep your fingers and your farts clear."
   },
   {
@@ -36,7 +83,18 @@
     "name": "Mulloway",
     "bag": "1",
     "min": 75,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Argyrosomus_japonicus.png",
+    "image": "assets/species/mulloway.svg",
+    "habitat": "Deep holes, bridges",
+    "bestTides": "Top and bottom of the tide",
+    "bestTimes": "Night on big moons",
+    "baits": [
+      "Live mullet",
+      "Squid"
+    ],
+    "lures": [
+      "Soft plastics",
+      "Vibes"
+    ],
     "blurb": "The silver ghost. Loves pressure edges and low\u2011light tides. Patience, persistence, and perhaps a lucky waft."
   }
 ]
