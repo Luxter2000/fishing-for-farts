@@ -1,0 +1,42 @@
+[
+  {
+    "id": "flathead",
+    "name": "Flathead",
+    "bag": "5 (combined)",
+    "min": 40,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Platycephalus_fuscus.png",
+    "blurb": "Ambush artist that loves edges and drain mouths. Glide a soft plastic near sand ripples and try not to spook it with your\u2026 enthusiasm."
+  },
+  {
+    "id": "bream",
+    "name": "Bream",
+    "bag": "30",
+    "min": 25,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Acanthopagrus_australis.png",
+    "blurb": "Picket\u2011pocket of the pylons. Light leaders, smelly baits. If it stinks, it links."
+  },
+  {
+    "id": "whiting",
+    "name": "Whiting",
+    "bag": "30",
+    "min": 23,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Sillago_ciliata.png",
+    "blurb": "Sand\u2011dwelling sugar sticks. Walk the dog lures or worms on a slow roll over the flats."
+  },
+  {
+    "id": "tailor",
+    "name": "Tailor",
+    "bag": "20",
+    "min": 35,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Pomatomus_saltatrix.png",
+    "blurb": "Foam\u2011line slashers. Metals at dawn and dusk; keep your fingers and your farts clear."
+  },
+  {
+    "id": "mulloway",
+    "name": "Mulloway",
+    "bag": "1",
+    "min": 75,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Argyrosomus_japonicus.png",
+    "blurb": "The silver ghost. Loves pressure edges and low\u2011light tides. Patience, persistence, and perhaps a lucky waft."
+  }
+]

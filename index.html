@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Fishing For Farts – A Stinky Journey</title>
+  <meta name="description" content="Land-based fishing spot recommendations with weather, tides, and a whiff of humour." />
+  <meta name="theme-color" content="#f7fafc" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="assets/icon-512.png" />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="anonymous"
+    defer
+  ></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
+  <!-- Icons (Feather) -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" type="module" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Fishing For Farts logo" class="logo" />
+      <div>
+        <h1>Fishing For Farts</h1>
+        <p class="subtitle">A Stinky Journey</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btn-use-location" class="btn primary" aria-label="Use my current location">
+        <i data-feather="navigation"></i>
+        <span>Use my location</span>
+      </button>
+      <button id="btn-pick-location" class="btn" aria-label="Pick a location on the map">
+        <i data-feather="map-pin"></i>
+        <span>Pick on map</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <div class="card now" aria-live="polite">
+        <h2><i data-feather="wind"></i> Conditions</h2>
+        <div class="conditions">
+          <div><span class="label">Wind</span><span id="wind"></span> <span id="windDir" class="arrow" title="Wind direction"></span></div>
+          <div><span class="label">Pressure</span><span id="pressure"></span></div>
+          <div><span class="label">Tide</span><span id="tidePhase" title="Approximate tide model">Approx</span></div>
+          <div><span class="label">Moon</span><span id="moon"></span></div>
+          <div><span class="label">Temp</span><span id="temp"></span></div>
+        </div>
+        <p class="pun" id="pun">Sniffing out bitey breezes…</p>
+      </div>
+
+      <div class="card species">
+        <h2><i data-feather="fish"></i> Species chances</h2>
+        <div id="speciesList" class="species-grid"></div>
+      </div>
+
+      <div class="card catches">
+        <div class="catches-header">
+          <h2><i data-feather="award"></i> Logbook & XP</h2>
+          <button id="btn-log-catch" class="btn small primary"><i data-feather="plus-circle"></i>Log a catch</button>
+        </div>
+        <div class="xp-bar-wrap" aria-label="Experience bar">
+          <div id="xpBar" class="xp-bar"><span id="xpText">Lv 1 • 0/100 XP</span></div>
+        </div>
+        <ul id="catchList" class="catch-list"></ul>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <div class="card map-card">
+        <div id="map" aria-label="Map showing nearby fishing spots"></div>
+      </div>
+
+      <div class="card spots">
+        <h2><i data-feather="map"></i> Nearby spots</h2>
+        <ul id="spotList" class="spot-list"></ul>
+      </div>
+
+      <div class="card chart">
+        <h2><i data-feather="activity"></i> Next 24h forecast</h2>
+        <canvas id="forecastChart" height="250" aria-label="Overlay chart for wind, tide and rain"></canvas>
+        <div class="legend-note">Overlay: wind (km/h), tide (m), rain (mm). Shaded = good bite windows.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Species Bio Modal -->
+  <dialog id="speciesModal" class="modal" aria-label="Species bio">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-body" id="speciesModalBody"></div>
+  </dialog>
+
+  <!-- Log Catch Modal -->
+  <dialog id="logModal" class="modal" aria-label="Log a catch">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-body">
+      <h3>Log a Catch</h3>
+      <form id="logForm" class="form">
+        <label>Species
+          <select id="logSpecies" required></select>
+        </label>
+        <label>Size (cm)
+          <input type="number" id="logSize" min="0" step="0.1" required />
+        </label>
+        <label>Method
+          <input type="text" id="logMethod" placeholder="Lure, bait, fly…" />
+        </label>
+        <label>Notes
+          <textarea id="logNotes" rows="3" placeholder="Spot, conditions, epic whiff…"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary"><i data-feather="save"></i> Save</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="app-footer">
+    <small>© <span id="year"></span> Fishing For Farts – built with Leaflet, Chart.js, and Open‑Meteo.</small>
+  </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

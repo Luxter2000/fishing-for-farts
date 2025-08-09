@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Wellington Point Jetty",
+    "lat": -27.4487,
+    "lon": 153.2376,
+    "description": "Jetty & rock edges; flathead, bream, whiting."
+  },
+  {
+    "name": "Cleveland Point (Lighthouse rocks)",
+    "lat": -27.5176,
+    "lon": 153.2873,
+    "description": "Rocky points, tidal flow; bream, tailor on dusk."
+  },
+  {
+    "name": "Manly Harbour Rock Wall",
+    "lat": -27.4508,
+    "lon": 153.1862,
+    "description": "Harbour wall; bream, tailor in SE winds."
+  },
+  {
+    "name": "Wynnum Jetty",
+    "lat": -27.4425,
+    "lon": 153.1666,
+    "description": "Family friendly; whiting on the flats."
+  },
+  {
+    "name": "Shorncliffe Pier",
+    "lat": -27.3213,
+    "lon": 153.0908,
+    "description": "Long pier; tailor and bream on the run\u2011in."
+  },
+  {
+    "name": "Woody Point Jetty",
+    "lat": -27.2582,
+    "lon": 153.102,
+    "description": "Good depth; flathead around pylons."
+  },
+  {
+    "name": "Sandgate Foreshore",
+    "lat": -27.3202,
+    "lon": 153.0739,
+    "description": "Drains and channels; whiting over sand."
+  },
+  {
+    "name": "Victoria Point Jetty",
+    "lat": -27.586,
+    "lon": 153.3101,
+    "description": "Jetty and ferry leads; bream, tailor at dusk."
+  },
+  {
+    "name": "Redland Bay Ferry Terminal",
+    "lat": -27.6203,
+    "lon": 153.3147,
+    "description": "Current lines and lights; mulloway after dark."
+  },
+  {
+    "name": "Pinkenba Rock Wall",
+    "lat": -27.4152,
+    "lon": 153.1304,
+    "description": "Deep water edge; tailor, mulloway on tides."
+  }
+]
